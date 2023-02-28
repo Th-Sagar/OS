@@ -8,16 +8,16 @@ int main()
     int i, j, smallest, count = 0, time, n;
     double avg = 0, tt = 0, end;
 
-    cout << "\nEnter the number of Processes: "; // input
+    cout << "\nEnter the number of Processes: ";
     cin >> n;
     for (i = 0; i < n; i++)
     {
-        cout << "\nEnter arrival time of process: "; // input
+        cout << "\nEnter arrival time of process: ";
         cin >> a[i];
     }
     for (i = 0; i < n; i++)
     {
-        cout << "\nEnter burst time of process: "; // input
+        cout << "\nEnter burst time of process: ";
         cin >> b[i];
     }
     for (i = 0; i < n; i++)
@@ -43,20 +43,11 @@ int main()
             turnaround[smallest] = end - a[smallest];
         }
     }
-    cout << "Process"
-         << "\t"
-         << "burst-time"
-         << "\t"
-         << "arrival-time"
-         << "\t"
-         << "waiting-time"
-         << "\t"
-         << "turnaround-time"
-         << "\t"
-         << "completion-time" << endl<<endl;
+    cout << "Process \tburst-time \tarrival-time \twaiting-time \tturnaround-time \tcompletion-time" << endl
+         << endl;
     for (i = 0; i < n; i++)
     {
-        cout << "p" << i + 1 << "\t\t" << x[i] << "\t\t" << a[i] << "\t\t" << waiting[i] << "\t\t" << turnaround[i] << "\t\t" << completion[i] << endl;
+        cout << "p" << i + 1 << "\t\t\t\t" << x[i] << "\t\t\t" << a[i] << "\t\t\t\t" << waiting[i] << "\t\t\t\t" << turnaround[i] << "\t\t\t\t\t" << completion[i] << endl;
         avg = avg + waiting[i];
         tt = tt + turnaround[i];
     }
